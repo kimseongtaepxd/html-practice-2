@@ -1,0 +1,367 @@
+
+/* reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button{
+  background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
+}
+
+a {
+  color: #000; 
+  text-decoration: none;
+  outline: none
+}
+
+a:hover, a:active {
+  text-decoration: none; 
+  color:#000;
+}
+
+/* setting */
+html, body {
+  width:100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.all {
+  width:100%;
+  height:100%;
+}
+/* font */
+@font-face {
+  font-family: "ReadexPro-Light";
+  src: url('../font/ReadexPro-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "ReadexPro-Medium";
+  src: url('../font/ReadexPro-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "ReadexPro-Bold";
+  src: url('../font/ReadexPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "ReadexPro-SemiBold";
+  src: url('../font/ReadexPro-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "ReadexPro";
+  src: url('../font/ReadexPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('../font/Inter-Regular.ttf') format('truetype');
+}
+
+/* header */
+header {
+  width:100%;
+  background-color: #fff9ea;
+  justify-content: center;
+}
+
+header > div {
+  width:1440px;
+  height:108px;
+  margin:0px auto;
+}
+
+.let-us-food {
+  width:167px;
+  height:47px;
+  margin: 29px 129px 32px 141px;
+
+}
+
+.let-us-food > a{
+  font: normal 600 24px 'ReadexPro-SemiBold', sans-serif;
+  line-height: 32px;
+  align-items: flex-end;
+}
+
+.let-us-food > a > img {
+  margin-left:4px;
+}
+
+.header-menu {
+  width: 570px;
+  height: 37px;
+  margin:34px 0px 37px 0px;
+  justify-content: space-between;
+}
+.header-menu > li > a {
+  font: normal 500 22px 'ReadexPro-SemiBold', sans-serif;
+  color: rgba(29, 29, 29, 0.7);
+}
+
+.search-ico > img{
+  width:26px;
+  height:26px;
+  margin:39px 31px 41px 73px;
+}
+
+.shopping-ico {
+  position: relative;
+}
+
+.shopping-alarm {
+  position: absolute;
+  width:12px;
+  height:12px;
+  top:35px;
+  right:-4px;
+  background-color: #ffcb45;
+  border-radius: 50%;
+  font : normal 10px 'ProdexPro', sans-serif;
+  text-align: center;
+  line-height: 12px;
+}
+
+.shopping-ico > img{
+  width:24px;
+  height:25px;
+  margin:39px 0px 44px 0px;
+}
+
+.sign-in {
+  width:122px;
+  height:38px;
+  margin:33px 130px 37px 33px;
+  background-color: #ffcb45;
+  border:0px;
+  border-radius: 50px;
+  font:normal 700 14px 'ReadexPro-Bold', sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in img {
+  width:16px;
+  height:18px;
+  margin-right:16px 
+}
+
+.sign-in > div {
+  
+}
+
+/* header hover */
+
+/* hover (공부필요) */
+.header-menu > li:hover {
+  color: #1D1D1D;
+  background-image: linear-gradient(#ffcb45, #ffcb45);
+  background-size: 0% 5px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+}
+
+.header-menu > li {
+  background-image: linear-gradient(#ffcb45, #ffcb45);
+  background-size: 0% 5px;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s;
+  background-position: 0 100%;
+}
+
+.header-menu li:hover {
+  background-size: 100% 5px;
+}
+
+/* Be The Fastest In Delivery Your Food */
+
+.home {
+  width:100%;
+  height:601px;
+  background-color: #fff9ea;
+}
+
+.home-content {
+  width:1440px;
+  height:601px;
+  margin:0 auto;
+}
+.home-title {
+  width:480px;
+  height:120px;
+  padding:176px 0px 0px 130px;
+  font:600 48px "ReadexPro", sans-serif;
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+
+.home-title > i {
+  color:#ffcb45;
+}
+
+.home-main-text {
+  width:370px;
+  height:46px;
+  margin:22px 0px 22px 135px ;
+  font:normal 400 18px "ReadexPro", sans-serif;
+}
+
+.home-start-btn {
+  width:122px;
+  height:38px;
+  font:0 0 0 135px;
+  margin:0 0 0 135px;
+  background-color: #ffcb45;
+  border-radius: 20px;
+  font:normal 800 14.5px 'Inter';
+}
+
+/* how-it-works */
+
+.how-it-works {
+  width:1032px;
+  height:505px;
+  margin:80px auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.how-it-works > * {
+  text-align: center;
+  margin:0 auto;
+}
+
+.how-it-works > strong {
+  width:140px;
+  height:28px;
+  font:normal 500 22px "ReadexPro";
+  color: #ffcb45;
+}
+
+.how-it-works > h2 {
+  width:247px;
+  height:40px;
+  margin-top:7px;
+  margin-bottom:26px;
+  font:normal 700 32px "ReadexPro";
+}
+
+.how-it-works > p {
+  width:611px;
+  height:56px;
+  margin-bottom:32px;
+  font:normal 500 22px "ReadexPro";
+}
+
+.strength {
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.strength > div {
+  width:241px;
+  height:316px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: middle;
+}
+
+.strength > div > em {
+  width:241px;
+  height:47px;
+  font:normal 600 28px "ReadexPro";
+  letter-spacing: 1px;
+}
+
+.strength > div > p {
+  font:normal 500 20px "ReadexPro";
+  margin-top: 15px;
+  line-height: 25px;
+  color: rgba(29, 29, 29, 0.7);
+}
+
+.easy-to-order {
+  background-image: url(../img/bg_order.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.fastest-delivery {
+  background-image: url(../img/bg_delivery.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.best-quality {
+  background-image: url(../img/bg_quality.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.easy-to-order > p{
+  width:234px;
+  height:50px;
+}
+
+.fastest-delivery > p {
+  width:220px;
+  height:50px;
+}
+
+.best-quality > p {
+  width:240px;
+  height:50px;
+  margin:0 auto;
+}
+

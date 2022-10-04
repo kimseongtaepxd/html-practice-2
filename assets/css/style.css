@@ -60,6 +60,10 @@ a:hover, a:active {
   color:#000;
 }
 
+input{
+  display: none;
+}
+
 /* setting */
 html, body {
   width:100%;
@@ -196,10 +200,6 @@ header > div {
   margin-right:16px 
 }
 
-.sign-in > div {
-  
-}
-
 /* header hover */
 
 /* hover (공부필요) */
@@ -229,6 +229,15 @@ header > div {
   width:100%;
   height:601px;
   background-color: #fff9ea;
+  background-image:
+  url('../img/bg_home'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_wavy_line.png'),
+  url('../img/bg_wavy_line.png');
+  background-repeat: no-repeat;
 }
 
 .home-content {
@@ -254,6 +263,7 @@ header > div {
   height:46px;
   margin:22px 0px 22px 135px ;
   font:normal 400 18px "ReadexPro", sans-serif;
+  color:#1D1D1D;
 }
 
 .home-start-btn {
@@ -278,13 +288,15 @@ header > div {
 
 .how-it-works > * {
   text-align: center;
+  vertical-align: middle;
   margin:0 auto;
 }
 
 .how-it-works > strong {
   width:140px;
   height:28px;
-  font:normal 500 22px "ReadexPro";
+  padding-right:2px;
+  font:normal 500 22px "ReadexPro-Medium";
   color: #ffcb45;
 }
 
@@ -293,19 +305,17 @@ header > div {
   height:40px;
   margin-top:7px;
   margin-bottom:26px;
-  font:normal 700 32px "ReadexPro";
+  padding-left:23px;
+  font:normal 700 32px "ReadexPro-Bold";
 }
 
 .how-it-works > p {
   width:611px;
   height:56px;
   margin-bottom:32px;
-  font:normal 500 22px "ReadexPro";
-}
-
-.strength {
-  justify-content: space-between;
-  align-self: flex-end;
+  padding-right:1px;
+  font:normal 500 22px "ReadexPro-Medium";
+  color:#616161;
 }
 
 .strength > div {
@@ -321,32 +331,35 @@ header > div {
   width:241px;
   height:47px;
   font:normal 600 28px "ReadexPro";
-  letter-spacing: 1px;
+  line-height : 47px;
+  letter-spacing: 0.5px;
 }
 
 .strength > div > p {
   font:normal 500 20px "ReadexPro";
   margin-top: 15px;
   line-height: 25px;
-  color: rgba(29, 29, 29, 0.7);
+  color: #1d1d1d;;
 }
 
 .easy-to-order {
+  margin-right:156px;
   background-image: url(../img/bg_order.png);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 16px top;
 }
 
 .fastest-delivery {
+  margin-right:153px;
   background-image: url(../img/bg_delivery.png);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 29px top;
 }
 
 .best-quality {
   background-image: url(../img/bg_quality.png);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 44px top;
 }
 
 .easy-to-order > p{
@@ -365,3 +378,124 @@ header > div {
   margin:0 auto;
 }
 
+/* our menu */
+
+.our-menu {
+  width:1192px;
+  height:670px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.our-menu strong {
+  width:108px;
+  height:28px;
+  font:normal 500 22px 'ReadexPro-Medium';
+  color:#ffcb45;
+  text-align: center;
+}
+
+.our-menu > h2 {
+  width:295px;
+  height:40px;
+  margin:6px auto 27px auto;
+  font:normal 700 32px 'ReadexPro-Bold';
+}
+
+.our-menu > p {
+  width:518px;
+  height:56px;
+  margin:0 auto;
+  margin-bottom: 32px;
+  font:normal 500 22px 'ReadexPro-Medium';
+  color:#616161;
+}
+
+.menu {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.menu > li {
+  width:280px;
+  height:371px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  filter: drop-shadow(2px 5px 12px rgba(0, 0, 0, 0.15));
+}
+
+.menu-large-container > img {
+  width:230px;
+  height:230px;
+  margin:13px 25px;
+}
+
+.menu-small-container {
+  width:280px;
+  height:112px;
+  background-color: #fff;
+  border-top-left-radius: 50% 23px;
+  border-top-right-radius: 50% 23px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.menu-contents {
+  width:236px;
+  height:85px;
+  padding:14px 22px;
+}
+
+.menu-contents > b {
+  width:108px;
+  height:25px;
+  font:normal 500 20px "ReadexPro-SemiBold";
+  margin-bottom:5px;
+}
+
+.menu-contents > p {
+  width:114px;
+  height:19px;
+  margin:0 auto;
+  margin-bottom: 13px;
+  font:normal 400 18px "ReadexPro";
+  color: #1d1d1d;
+}
+
+.menu-cost-and-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cost {
+  width:96px;
+  height:23px;
+  text-align: left;
+  line-height: 23px;
+  font:normal 500 22px "ReadexPro-SemiBold";
+}
+
+.like {
+  width:24px;
+  height:24px;
+  content: url('../img/img_heart_unseleted.png');
+  cursor: pointer;
+}
+
+input:checked + .like {
+  width:24px;
+  height:24px;
+  content: url('../img/img_heart_selected.png');
+  cursor: pointer;
+}
+
+.more-menu {
+  width:136px;
+  height:40px;
+  background-color: #ffcb45;
+  font:normal 700 14px "ReadexPro";
+  border-radius: 50px;
+}

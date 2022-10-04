@@ -254,6 +254,7 @@ header > div {
   height:46px;
   margin:22px 0px 22px 135px ;
   font:normal 400 18px "ReadexPro", sans-serif;
+  color:#686660;
 }
 
 .home-start-btn {
@@ -276,14 +277,16 @@ header > div {
   vertical-align: middle;
 }
 
-.how-it-works > * {
+.how-it-works * {
   text-align: center;
+  vertical-align: middle;
   margin:0 auto;
 }
 
 .how-it-works > strong {
   width:140px;
   height:28px;
+  padding-right:2px;
   font:normal 500 22px "ReadexPro";
   color: #ffcb45;
 }
@@ -293,6 +296,7 @@ header > div {
   height:40px;
   margin-top:7px;
   margin-bottom:26px;
+  padding-left:15px;
   font:normal 700 32px "ReadexPro";
 }
 
@@ -303,25 +307,19 @@ header > div {
   font:normal 500 22px "ReadexPro";
 }
 
-.strength {
-  justify-content: space-between;
-  align-self: flex-end;
-}
-
 .strength > div {
   width:241px;
   height:316px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: middle;
 }
 
 .strength > div > em {
   width:241px;
   height:47px;
+  margin-top:204px;
   font:normal 600 28px "ReadexPro";
-  letter-spacing: 1px;
+  line-height: 47px;
 }
 
 .strength > div > p {
@@ -334,19 +332,21 @@ header > div {
 .easy-to-order {
   background-image: url(../img/bg_order.png);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 30% top;
+  margin-right:156px;
 }
 
 .fastest-delivery {
   background-image: url(../img/bg_delivery.png);
   background-repeat: no-repeat;
   background-position: center top;
+  margin-right:153px;
 }
 
 .best-quality {
   background-image: url(../img/bg_quality.png);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: 80% top;
 }
 
 .easy-to-order > p{
@@ -365,3 +365,21 @@ header > div {
   margin:0 auto;
 }
 
+/* our-menu */
+
+.our-menu > strong {
+  width:108px;
+  height:28px;
+  padding-right:2px;
+  font:normal 500 22px "ReadexPro";
+  color: #ffcb45;
+}
+
+.our-menu > h2 {
+  width:247px;
+  height:40px;
+  margin-top:7px;
+  margin-bottom:26px;
+  padding-left:15px;
+  font:normal 700 32px "ReadexPro";
+}

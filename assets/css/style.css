@@ -80,7 +80,9 @@ html, body {
 .all {
   width:100%;
   height:100%;
+  overflow-x: hidden;
 }
+
 /* font */
 @font-face {
   font-family: "ReadexPro-Light";
@@ -229,14 +231,12 @@ header > div {
   width:100%;
   height:601px;
   background-color: #fff9ea;
-  background-image:
-  url('../img/bg_home'),
-  url('../img/bg_circle.png'),
-  url('../img/bg_circle.png'),
-  url('../img/bg_circle.png'),
-  url('../img/bg_circle.png'),
+  background-image:   
   url('../img/bg_wavy_line.png'),
   url('../img/bg_wavy_line.png');
+  background-position: 
+  left 491px,
+  left 528px; 
   background-repeat: no-repeat;
 }
 
@@ -244,6 +244,25 @@ header > div {
   width:1440px;
   height:601px;
   margin:0 auto;
+  background-image:
+  url('../img/bg_home.png'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_circle.png'),
+  url('../img/bg_circle.png');
+  background-size:
+  500px 589px,
+  41px, 
+  54px,
+  19px,
+  74px;
+  background-position: 
+  810px 12px,
+  734px 462px,
+  810px 52px,
+  854px 237px,
+  1220px 249px;
+  background-repeat: no-repeat;
 }
 .home-title {
   width:480px;
@@ -432,6 +451,11 @@ header > div {
   margin:13px 25px;
 }
 
+.menu-large-container:nth-child(4) img {
+  margin:15px 12px 13px 38px;
+}
+
+
 .menu-small-container {
   width:280px;
   height:112px;
@@ -464,15 +488,10 @@ header > div {
   color: #1d1d1d;
 }
 
-.menu-cost-and-like {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
 .cost {
   width:96px;
   height:23px;
+  float:left;
   text-align: left;
   line-height: 23px;
   font:normal 500 22px "ReadexPro-SemiBold";
@@ -481,6 +500,7 @@ header > div {
 .like {
   width:24px;
   height:24px;
+  float:right;
   content: url('../img/img_heart_unseleted.png');
   cursor: pointer;
 }
@@ -498,4 +518,206 @@ input:checked + .like {
   background-color: #ffcb45;
   font:normal 700 14px "ReadexPro";
   border-radius: 50px;
+}
+
+/* what the say */
+
+.what-the-say {
+  display: flex;
+  width:1099px;
+  height:410px;
+  margin:45px auto 80px auto;
+  padding-left:59px;
+  text-align: left;
+}
+
+.what-the-say-img {
+  width:431px;
+  height:410px;
+  margin-right:101px;
+  border-radius: 10px;
+  background-image:
+  url(../img/bg_what_the_say_1.png),
+  url(../img/bg_what_the_say_2.png),
+  url(../img/bg_what_the_say_3.png);
+  background-position: 
+  -16px -16px,
+  -16px 186px,
+  207px 186px;
+  background-repeat: no-repeat;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.what-the-say strong {
+  display: block;
+  width:140px;
+  height:28px;
+  font:normal 500 22px 'ReadexPro-Medium';
+  color:#ffc845;
+  line-height: 28px;
+  margin:21px 0px 9px 0px;
+}
+
+.what-the-say h2 {
+  width:481px;
+  height:80px;
+  font:normal 700 32px 'Readexpro-Bold';
+  margin-bottom: 32px;
+  line-height: 40px;
+}
+
+.review-container {
+  display: flex;
+  width:567px;
+  height:210px;
+  flex-wrap: nowrap;
+  transition:.5s;
+}
+
+.review {
+  width:452px;
+  height:210px;
+  margin-right:24px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.profile {
+  width:218px;
+  height:60px;
+  padding:28px 218px 24px 20px;
+}
+
+.profile > img {
+  width:59px;
+  height:60px;
+  float:left;
+  border-radius: 50%;
+}
+
+.profile > em {
+  width:140px;
+  height:21px;
+  margin-left:19px;
+  margin-bottom:11px;
+  font:normal 500 20px "ReadexPro"
+}
+
+.review > p {
+  margin:0px 20px 29px;
+  font:normal 400 18px "ReadexPro";
+  color:#676767;
+}
+
+.star-container{
+  display: flex;
+  width:134px;
+  height:24px;
+  position:relative;
+  top:11px;
+  left:18px;
+  background-image:url("../img/img_star_empty.png");
+  background-size: 134px;
+  background-repeat: no-repeat;
+  font-size:0;
+}
+
+.star-container .star{
+  display:block;
+  position:absolute;
+  width:134px;
+  height:24px;
+  top:0px;
+  left:0px;
+  background-image:url("../img/img_star_full.png");
+  background-size: 134px;
+  background-repeat: no-repeat;
+}
+
+.star-container .label-star{
+  position: relative;
+  display:inline-block;
+  width:14px;
+  height:24px;
+  box-sizing:border-box;
+  z-index: 1;
+}
+
+.star-container .star-radio{
+  opacity:0;
+  width:0;
+  height:0;
+  position:absolute;
+}
+
+.star-container .star-radio:nth-of-type(1):hover ~ .star,
+.star-container .star-radio:nth-of-type(1):checked ~ .star{width:9.5%;}
+
+.star-container .star-radio:nth-of-type(2):hover ~ .star,
+.star-container .star-radio:nth-of-type(2):checked ~ .star{width:20%;}
+
+.star-container .star-radio:nth-of-type(3):hover ~ .star,
+.star-container .star-radio:nth-of-type(3):checked ~ .star{width:30%;}
+
+.star-container .star-radio:nth-of-type(4):hover ~ .star,
+.star-container .star-radio:nth-of-type(4):checked ~ .star{width:40%;}
+
+.star-container .star-radio:nth-of-type(5):hover ~ .star,
+.star-container .star-radio:nth-of-type(5):checked ~ .star{width:50.5%;}
+
+.star-container .star-radio:nth-of-type(6):hover ~ .star,
+.star-container .star-radio:nth-of-type(6):checked ~ .star{width:60%;}
+
+.star-container .star-radio:nth-of-type(7):hover ~ .star,
+.star-container .star-radio:nth-of-type(7):checked ~ .star{width:71.25%;}
+
+.star-container .star-radio:nth-of-type(8):hover ~ .star,
+.star-container .star-radio:nth-of-type(8):checked ~ .star{width:80%;}
+
+.star-container .star-radio:nth-of-type(9):hover ~ .star,
+.star-container .star-radio:nth-of-type(9):checked ~ .star{width:91.25%;}
+
+.star-container .star-radio:nth-of-type(10):hover ~ .star,
+.star-container .star-radio:nth-of-type(10):checked ~ .star{width:100%;}
+
+.blind{
+  position:absolute;
+  clip:rect(0 0 0 0);
+  margin:-1px;
+  width:1px;
+  height: 1px;
+  overflow:hidden;
+}
+
+.review-page {
+  display:inline-block;
+  width:8px;
+  height:8px;
+  margin-top:15px;
+  border-radius: 50%;
+  background-color: #fff9ea;
+}
+
+.review-page:nth-of-type(1) {
+  margin-left:175px;
+}
+
+.review-page:nth-of-type(2) {
+  margin-left:8px;
+}
+
+.review-page:nth-of-type(3) {
+  margin-left:8px;
+}
+
+.page-radio:nth-of-type(1):checked ~ .review-page:nth-of-type(1) {
+  background-color: #ffcb45;
+}
+
+.page-radio:nth-of-type(2):checked ~ .review-page:nth-of-type(2) {
+  background-color: #ffcb45;
+}
+
+.page-radio:nth-of-type(3):checked ~ .review-page:nth-of-type(3) {
+  background-color: #ffcb45;
 }

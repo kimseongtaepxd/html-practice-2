@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title></title>
+    <title>Let's Food</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -12,19 +12,19 @@
       <!-- header -->
       <header>
         <div class="flex">
-          <h1 class="let-us-food">
+          <h1 class="header-let-us-food">
             <a class="flex" href="#Let-us-food">
               Let’sFood
             <img src="assets/img/img_let_us_food.png" alt="렛츠푸드로고">
             </a>
           </h1>
-          <ul class="header-menu flex">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Home">Menu</a></li>
-            <li><a href="#Home">How it works</a></li>
-            <li><a href="#Home">About</a></li>
-            <li><a href="#Home">Contact</a></li>
-          </ul>
+          <nav class="header-menu flex">
+            <a href="#Home">Home</a>
+            <a href="#Home">Menu</a>
+            <a href="#Home">How it works</a>
+            <a href="#Home">About</a>
+            <a href="#Home">Contact</a>
+          </nav>
           <a class="search-ico">
             <img src="assets/img/ico_search.png" alt="검색">
           </a>
@@ -40,6 +40,7 @@
             <img class="login-ico" src="assets/img/ico_sign_in.png" alt="로그인">
             Sign in
           </button>
+        </div>
       </header>
 
       <main>
@@ -59,7 +60,7 @@
           </div>
         </div>
 
-        <!-- 글자 위치 수정 필요 (좀 많이 뒤틀림)-->
+        <!-- 픽셀 정확히 맞추기 힘들다.. -->
         <div class="how-it-works">
           <strong>How it works</strong>
           <h2>What We Serve</h2>
@@ -80,9 +81,213 @@
           </div>
         </div>
 
+        <div class="our-menu">
+          <strong>Our menu</strong>
+          <h2>Our Popular Menu</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur <br>
+            aliquam elit ut aliquam
+          </p>
+          
+          <ul class="menu">
+            <li class="menu-large-container">
+              <img src="assets/img/img_mie_ramen.png" alt="미에라멘">
+              <!-- 테두리 모양 똑같이 어떻게 만들지.. 
+                테두리가 두 번 꺾일 수 있나?-->
+              <div class="menu-small-container">
+                <div class="menu-contents">
+                  <b>Mie Ramen</b>
+                  <p>lorem ipsum</p>
+                  <span class="cost">$ 20.2</span>
+                  <input type="checkbox" name="like" id="menu-mie-ramen" value="menus">
+                  <label class="like" for="menu-mie-ramen"></label>
+                </div>
+              </div>
+            </li>
+
+            <li class="menu-large-container">
+              <img src="assets/img/img_salad_tahu.png" alt="샐러드타후">
+              <div class="menu-small-container">
+                <div class="menu-contents">
+                  <b>Salad Tahu</b>
+                  <p>lorem ipsum</p>
+                  <span class="cost">$ 20.2</span>
+                  <input type="checkbox" name="like" id="menu-salad-tahu" value="menus">
+                  <label class="like" for="menu-salad-tahu"></label>
+                </div>
+              </div>
+            </li>
+
+            <li class="menu-large-container">
+              <img src="assets/img/img_roti_baker.png" alt="로티베이커">
+              <div class="menu-small-container">
+                <div class="menu-contents">
+                  <b>Roti Baker</b>
+                  <p>lorem ipsum</p>
+                  <span class="cost">$ 20.2</span>
+                  <input type="checkbox" name="like" id="menu-roti-baker" value="menus">
+                  <label class="like" for="menu-roti-baker"></label>
+                </div>
+              </div>
+            </li>
+
+            <li class="menu-large-container">
+              <img src="assets/img/img_spaghetti.png" alt="스파게티">
+              <div class="menu-small-container">
+                <div class="menu-contents">
+                  <b>Spaghetti</b>
+                  <p>lorem ipsum</p>
+                  <span class="cost">$ 20.2</span>
+                  <input type="checkbox" name="like" id="menu-spaghetti" value="menus">
+                  <label class="like" for="menu-spaghetti"></label>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="more-menu">
+            More Menu
+          </button>
+        </div>
+
+        <div class="what-the-say">
+          <!-- 배경용 div? 이게 맞나
+          아니라도 다른 방식으로 어떻게 하지?-->
+          <div class="what-the-say-img"></div>
+          <div>
+            <strong>What the say</strong>
+            <h2>What Our customers Say About Us</h2>
+
+            <div class="what-the-say-review">
+              <ul class="review-container">
+                <li class="review">
+                  <div class="profile">
+                    <img src="assets/img/img_profile_1.png" alt="프로필사진">
+                    <em class="name">Naura Silvana</em>
+                    <!-- 별점 -->
+                    <div class="star-container">
+                      <label for="starpoint_1" class="label-star" title="0.5"><span class="blind">0.5점</span></label>
+                      <label for="starpoint_2" class="label-star" title="1.0"><span class="blind">1.0점</span></label>
+                      <label for="starpoint_3" class="label-star" title="1.5"><span class="blind">1.5점</span></label>
+                      <label for="starpoint_4" class="label-star" title="2.0"><span class="blind">2.0점</span></label>
+                      <label for="starpoint_5" class="label-star" title="2.5"><span class="blind">2.5점</span></label>
+                      <label for="starpoint_6" class="label-star" title="3.0"><span class="blind">3.0점</span></label>
+                      <label for="starpoint_7" class="label-star" title="3.5"><span class="blind">3.5점</span></label>
+                      <label for="starpoint_8" class="label-star" title="4.0"><span class="blind">4.0점</span></label>
+                      <label for="starpoint_9" class="label-star" title="4.5"><span class="blind">4.5점</span></label>
+                      <label for="starpoint_10" class="label-star" title="5.0"><span class="blind">5.0점</span></label>
+                      <input type="radio" name="starpoint" id="starpoint_1" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_2" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_3" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_4" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_5" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_6" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_7" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_8" class="star-radio">
+                      <input type="radio" name="starpoint" id="starpoint_9" class="star-radio" checked>
+                      <input type="radio" name="starpoint" id="starpoint_10" class="star-radio">
+                      <span class="star"></span>
+                    </div>
+                  </div>
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis."</p>
+                </li>
+
+                <li class="review">
+                  <div class="profile">
+                    <img src="assets/img/img_profile_2.png" alt="프로필사진">
+                    <em class="name">Azura</em>
+                    <!-- 별점 -->
+                    <div class="star-container">
+                      <label for="starpoint_1_2" class="label-star" title="0.5"><span class="blind">0.5점</span></label>
+                      <label for="starpoint_2_2" class="label-star" title="1.0"><span class="blind">1.0점</span></label>
+                      <label for="starpoint_3_2" class="label-star" title="1.5"><span class="blind">1.5점</span></label>
+                      <label for="starpoint_4_2" class="label-star" title="2.0"><span class="blind">2.0점</span></label>
+                      <label for="starpoint_5_2" class="label-star" title="2.5"><span class="blind">2.5점</span></label>
+                      <label for="starpoint_6_2" class="label-star" title="3.0"><span class="blind">3.0점</span></label>
+                      <label for="starpoint_7_2" class="label-star" title="3.5"><span class="blind">3.5점</span></label>
+                      <label for="starpoint_8_2" class="label-star" title="4.0"><span class="blind">4.0점</span></label>
+                      <label for="starpoint_9_2" class="label-star" title="4.5"><span class="blind">4.5점</span></label>
+                      <label for="starpoint_10_2" class="label-star" title="5.0"><span class="blind">5.0점</span></label>
+                      <input type="radio" name="starpoint-2" id="starpoint_1_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_2_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_3_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_4_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_5_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_6_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_7_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_8_2" class="star-radio">
+                      <input type="radio" name="starpoint-2" id="starpoint_9_2" class="star-radio" checked>
+                      <input type="radio" name="starpoint-2" id="starpoint_10_2" class="star-radio-2">
+                      <span class="star"></span>
+                    </div>
+                  </div>
+                  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis."</p>
+                </li>
+              </ul>
+
+              <!-- 억지로 코드 망가트리면서 애니메이션 만들 필요가 있을까?(안일한 생각 일단 만들어?)-->
+              <input type="radio" name="page" id="review_page_1" class="page-radio" checked>
+              <input type="radio" name="page" id="review_page_2" class="page-radio">
+              <input type="radio" name="page" id="review_page_3" class="page-radio">
+              <label for="review_page_1" class="review-page" title="1page"><span class="blind">1페이지</span></label>
+              <label for="review_page_2" class="review-page" title="2page"><span class="blind">2페이지</span></label>
+              <label for="review_page_3" class="review-page" title="3page"><span class="blind">3페이지</span></label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="advertisement">
+          <em>Join our member and get discount up to 50%</em>
+          <button>Sign Up</button>
+        </div>
       </main>
 
       <footer>
+        <div class="footer-flex">
+          <div class="footer-layer">
+            <h1 class="footer-let-us-food">
+              <a class="flex" href="#Let-us-food">
+                Let’sFood
+              <img src="assets/img/img_let_us_food.png" alt="렛츠푸드로고">
+              </a>
+            </h1>
+            <p>Jalan Semangka Raya, Telaga<br> 
+            Murni, Cikarang Barat, Kab, Bekasi</p>
+            <div class="sns-link">
+              <div class="insta"><img src="assets/img/ico_insta.png" alt="인스타그램아이콘"></div>
+              <div class="facebook"><img src="assets/img/ico_facebook.png" alt="페이스북아이콘"></div>
+              <div class="twitter"><img src="assets/img/ico_twitter.png" alt="트위터아이콘"></div>
+            </div>
+          </div>
+          <ul class="footer-info">
+            <li>
+              <ul>
+                <li><h3 class="title">Company</h3></li>
+                <li>About Us</li>
+                <li>Career</li>
+                <li>How It Work</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><h3 class="title">Policy</h3></li>
+                <li>FAQ</li>
+                <li>Privacy</li>
+                <li>Shipping</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><h3 class="title">Get In Touch</h3></li>
+                <li>+62 896 7311 2766</li>
+                <li>food@example.com</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>© 2022 Let’sFood. ALL RIGHT RESERVED.</p>
+        </div>
       </footer>
     </div>
   </body>

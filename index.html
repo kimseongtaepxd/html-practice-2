@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title></title>
+    <title>Let's Food</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -12,19 +12,19 @@
       <!-- header -->
       <header>
         <div class="flex">
-          <h1 class="let-us-food">
+          <h1 class="header-let-us-food">
             <a class="flex" href="#Let-us-food">
               Let’sFood
             <img src="assets/img/img_let_us_food.png" alt="렛츠푸드로고">
             </a>
           </h1>
-          <ul class="header-menu flex">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Home">Menu</a></li>
-            <li><a href="#Home">How it works</a></li>
-            <li><a href="#Home">About</a></li>
-            <li><a href="#Home">Contact</a></li>
-          </ul>
+          <nav class="header-menu flex">
+            <a href="#Home">Home</a>
+            <a href="#Home">Menu</a>
+            <a href="#Home">How it works</a>
+            <a href="#Home">About</a>
+            <a href="#Home">Contact</a>
+          </nav>
           <a class="search-ico">
             <img src="assets/img/ico_search.png" alt="검색">
           </a>
@@ -40,6 +40,7 @@
             <img class="login-ico" src="assets/img/ico_sign_in.png" alt="로그인">
             Sign in
           </button>
+        </div>
       </header>
 
       <main>
@@ -223,7 +224,8 @@
                 </li>
               </ul>
 
-              <input type="radio" name="page" id="review_page_1" class="page-radio">
+              <!-- 억지로 코드 망가트리면서 애니메이션 만들 필요가 있을까?(안일한 생각 일단 만들어?)-->
+              <input type="radio" name="page" id="review_page_1" class="page-radio" checked>
               <input type="radio" name="page" id="review_page_2" class="page-radio">
               <input type="radio" name="page" id="review_page_3" class="page-radio">
               <label for="review_page_1" class="review-page" title="1page"><span class="blind">1페이지</span></label>
@@ -233,9 +235,59 @@
 
           </div>
         </div>
+
+        <div class="advertisement">
+          <em>Join our member and get discount up to 50%</em>
+          <button>Sign Up</button>
+        </div>
       </main>
 
       <footer>
+        <div class="footer-flex">
+          <div class="footer-layer">
+            <h1 class="footer-let-us-food">
+              <a class="flex" href="#Let-us-food">
+                Let’sFood
+              <img src="assets/img/img_let_us_food.png" alt="렛츠푸드로고">
+              </a>
+            </h1>
+            <p>Jalan Semangka Raya, Telaga<br> 
+            Murni, Cikarang Barat, Kab, Bekasi</p>
+            <div class="sns-link">
+              <div class="insta"><img src="assets/img/ico_insta.png" alt="인스타그램아이콘"></div>
+              <div class="facebook"><img src="assets/img/ico_facebook.png" alt="페이스북아이콘"></div>
+              <div class="twitter"><img src="assets/img/ico_twitter.png" alt="트위터아이콘"></div>
+            </div>
+          </div>
+          <ul class="footer-info">
+            <li>
+              <ul>
+                <li><h3 class="title">Company</h3></li>
+                <li>About Us</li>
+                <li>Career</li>
+                <li>How It Work</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><h3 class="title">Policy</h3></li>
+                <li>FAQ</li>
+                <li>Privacy</li>
+                <li>Shipping</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><h3 class="title">Get In Touch</h3></li>
+                <li>+62 896 7311 2766</li>
+                <li>food@example.com</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>© 2022 Let’sFood. ALL RIGHT RESERVED.</p>
+        </div>
       </footer>
     </div>
   </body>

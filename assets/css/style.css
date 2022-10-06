@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, nav {
 	list-style: none;
 }
 blockquote, q {
@@ -46,7 +46,7 @@ table {
 }
 
 button{
-  background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
+  border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
 }
 
 a {
@@ -80,7 +80,10 @@ html, body {
 .all {
   width:100%;
   height:100%;
-  overflow-x: hidden;
+}
+
+main > div {
+  margin:0 auto;
 }
 
 /* font */
@@ -114,6 +117,27 @@ html, body {
   src: url('../font/Inter-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url('../font/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url('../font/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url('../font/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url('../font/Inter-ExtraBold.ttf') format('truetype');
+}
+
+
 /* header */
 header {
   width:100%;
@@ -127,20 +151,20 @@ header > div {
   margin:0px auto;
 }
 
-.let-us-food {
+.header-let-us-food {
   width:167px;
   height:47px;
   margin: 29px 129px 32px 141px;
 
 }
 
-.let-us-food > a{
+.header-let-us-food > a{
   font: normal 600 24px 'ReadexPro-SemiBold', sans-serif;
   line-height: 32px;
   align-items: flex-end;
 }
 
-.let-us-food > a > img {
+.header-let-us-food > a > img {
   margin-left:4px;
 }
 
@@ -150,9 +174,8 @@ header > div {
   margin:34px 0px 37px 0px;
   justify-content: space-between;
 }
-.header-menu > li > a {
+.header-menu > a {
   font: normal 500 22px 'ReadexPro-SemiBold', sans-serif;
-  color: rgba(29, 29, 29, 0.7);
 }
 
 .search-ico > img{
@@ -205,15 +228,16 @@ header > div {
 /* header hover */
 
 /* hover (공부필요) */
-.header-menu > li:hover {
-  color: #1D1D1D;
+.header-menu > a:hover {
+  color: #1d1d1d;
   background-image: linear-gradient(#ffcb45, #ffcb45);
   background-size: 0% 5px;
   background-repeat: no-repeat;
   transition: background-size 0.3s;
 }
 
-.header-menu > li {
+.header-menu > a {
+  color:#615f5a;
   background-image: linear-gradient(#ffcb45, #ffcb45);
   background-size: 0% 5px;
   background-repeat: no-repeat;
@@ -221,9 +245,15 @@ header > div {
   background-position: 0 100%;
 }
 
-.header-menu li:hover {
+.header-menu a:hover {
   background-size: 100% 5px;
+  color: #1d1d1d;
 }
+
+.header-menu > a {
+  color:#615f5a;
+}
+
 
 /* Be The Fastest In Delivery Your Food */
 
@@ -282,7 +312,7 @@ header > div {
   height:46px;
   margin:22px 0px 22px 135px ;
   font:normal 400 18px "ReadexPro", sans-serif;
-  color:#1D1D1D;
+  color:#615f5a;
 }
 
 .home-start-btn {
@@ -292,7 +322,7 @@ header > div {
   margin:0 0 0 135px;
   background-color: #ffcb45;
   border-radius: 20px;
-  font:normal 800 14.5px 'Inter';
+  font:normal 800 14.5px 'Inter-Medium';
 }
 
 /* how-it-works */
@@ -349,16 +379,15 @@ header > div {
 .strength > div > em {
   width:241px;
   height:47px;
-  font:normal 600 28px "ReadexPro";
+  font:normal 600 28px "ReadexPro-SemiBold";
   line-height : 47px;
-  letter-spacing: 0.5px;
 }
 
 .strength > div > p {
-  font:normal 500 20px "ReadexPro";
+  font:normal 500 20px "ReadexPro-Medium";
   margin-top: 15px;
   line-height: 25px;
-  color: #1d1d1d;;
+  color: #616161;
 }
 
 .easy-to-order {
@@ -529,6 +558,7 @@ input:checked + .like {
   margin:45px auto 80px auto;
   padding-left:59px;
   text-align: left;
+  overflow-x:hidden;
 }
 
 .what-the-say-img {
@@ -571,7 +601,6 @@ input:checked + .like {
   width:567px;
   height:210px;
   flex-wrap: nowrap;
-  transition:.5s;
 }
 
 .review {
@@ -580,6 +609,7 @@ input:checked + .like {
   margin-right:24px;
   background-color: #f1f1f1;
   border-radius: 10px;
+  transition:.5s;
 }
 
 .profile {
@@ -675,7 +705,7 @@ input:checked + .like {
 .star-container .star-radio:nth-of-type(8):checked ~ .star{width:80%;}
 
 .star-container .star-radio:nth-of-type(9):hover ~ .star,
-.star-container .star-radio:nth-of-type(9):checked ~ .star{width:91.25%;}
+.star-container .star-radio:nth-of-type(9):checked ~ .star{width:91%;}
 
 .star-container .star-radio:nth-of-type(10):hover ~ .star,
 .star-container .star-radio:nth-of-type(10):checked ~ .star{width:100%;}
@@ -720,4 +750,173 @@ input:checked + .like {
 
 .page-radio:nth-of-type(3):checked ~ .review-page:nth-of-type(3) {
   background-color: #ffcb45;
+}
+
+/* advertisement */
+
+.advertisement {
+  width:1180px;
+  height:332px;
+  margin-bottom: 80px;
+  background-image:url('../img/bg_advertisement.png');
+  background-size:1180px 332px;
+}
+
+.advertisement > em {
+  display: block;
+  width:524px;
+  height:80px;
+  padding:92px 328px 30px 328px;
+  text-align: center;
+  font:normal 700 32px "ReadexPro";
+  color:#fff;
+}
+
+.advertisement > button {
+  display: block;
+  width:122px;
+  height:38px;
+  margin:0px auto;
+  border-radius: 50px;
+  font:normal 700 14px 'ReadexPro';
+  text-align: center;
+  background-color: #fec042;
+}
+
+/* footer */
+
+footer {
+  width:100%;
+  height:489px;
+  background-color: #fff9ea;
+}
+
+.footer-flex {
+  display: flex;
+  width:1072px;
+  height:200px;
+  margin:0 auto;
+  padding:84px 103px 91px 0px;
+  background-image:
+  url(../img/bg_circle.png),
+  url(../img/bg_circle.png),
+  url(../img/bg_circle.png);
+  background-size: 38px, 66px, 99px;
+  background-repeat: no-repeat;
+  background-position: 
+  380px 81px,
+  664px 233px,
+  986px 31px;
+}
+
+.footer-layer {
+  width:380px;
+  height:200px;
+  margin-right:20px;
+}
+
+.footer-let-us-food {
+  width:167px;
+  height:47px;
+}
+
+.footer-let-us-food > a{
+  font: normal 600 24px 'ReadexPro-SemiBold', sans-serif;
+  line-height: 32px;
+  align-items: flex-end;
+  color:#1d1d1d;
+}
+
+.footer-let-us-food > a > img {
+  margin-left:4px;
+}
+
+.footer-layer > p {
+  width:380px;
+  height:50px;
+  margin-top:24px;
+  margin-bottom:32px;
+  font:normal 400 20px "ReadexPro";
+  color:#615f5a;
+}
+.copyright {
+  width:1180px;
+  height:66px;
+  margin:0 auto;
+  border-top: 1px solid rgba(29, 29, 29, 0.5);
+}
+
+.copyright > p{
+  width:321px;
+  height:20px;
+  padding-top:46px;
+  padding-left:25px;
+  margin:0 auto;
+  font:normal 400 16px "ReadexPro";
+}
+
+.sns-link {
+  display: flex;
+  gap:24px;
+}
+
+.insta, .twitter {
+  display: flex;
+  width:45px;
+  height:48px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(29, 29, 29, 0.15);
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook {
+  display: flex;
+  width:46px;
+  height:48px;
+  background-color: #ffcb45;
+  border-radius: 50%;
+  box-shadow: 0px 4px 24px rgba(29, 29, 29, 0.25);
+  justify-content: center;
+  align-items: center;
+}
+
+.insta > img, .facebook > img, .twitter > img {
+  padding:10px;
+}
+
+.footer-info {
+  display: flex;
+}
+
+.footer-info > li > ul {
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  font:normal 400 18px "ReadexPro";
+  color:#615f5a;
+}
+
+.footer-info h3 {
+  margin:15px 0px;
+  font:normal 500 20px "ReadexPro-Medium";
+  color:#1d1d1d;
+}
+
+.footer-info > li:nth-of-type(1) > ul {
+  width:111px;
+  height:157px;
+  margin-right:189px;
+}
+
+.footer-info > li:nth-of-type(2) > ul {
+  width:78px;
+  height:157px;
+  margin-right:122px;
+}
+
+.footer-info > li:nth-of-type(3) > ul {
+  width:172px;
+  height:118px;
 }
